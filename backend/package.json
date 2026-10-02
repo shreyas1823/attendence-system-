@@ -1,0 +1,41 @@
+{
+  "name": "ai-attendance-backend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "dev": "tsx watch src/server.ts",
+    "start": "node dist/server.js",
+    "lint": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "tsx src/db/migrate.ts",
+    "db:seed": "tsx src/db/seed.ts",
+    "device:provision": "tsx src/cli/provision-device.ts",
+    "staging:seed-student": "tsx src/cli/seed-staging-student.ts",
+    "worker:sheets": "tsx src/workers/run-sheets-worker.ts"
+  },
+  "dependencies": {
+    "@fastify/cors": "11.2.0",
+    "@fastify/helmet": "13.0.2",
+    "@fastify/rate-limit": "11.2.0",
+    "argon2": "0.45.1",
+    "drizzle-orm": "0.45.2",
+    "fastify": "5.12.5",
+    "postgres": "3.4.9",
+    "zod": "4.6.5"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "0.5.8",
+    "@types/node": "24.10.4",
+    "drizzle-kit": "0.31.10",
+    "tsx": "4.21.0",
+    "typescript": "7.0.2",
+    "vitest": "5.0.1"
+  }
+}

@@ -1,0 +1,36 @@
+# Local firmware credentials
+Attendance/secrets.h
+Attendance/device_secrets.h
+
+# Local environment and secret files
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Google Apps Script local credentials/cache
+.clasprc.json
+.clasp.json.local
+
+# Build and tool output
+build/
+dist/
+.pio/
+.vscode/
+.idea/
+node_modules/
+.pnpm-store/
+.device-credentials/
+coverage/
+*.bin
+*.elf
+*.map
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+*.swp
+*.tmp

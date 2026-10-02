@@ -1,0 +1,11 @@
+[Unit]
+Description=AI Attendance staging Sheets outbox worker (one bounded run)
+Requires=docker.service
+After=docker.service
+ConditionPathExists=/opt/ai-attendance/infra/.env.staging
+
+[Service]
+Type=oneshot
+WorkingDirectory=/opt/ai-attendance
+ExecStart=/usr/bin/docker compose --env-file infra/.env.staging -f infra/docker-compose.staging.yml --profile tools run --rm sheets-worker
+TimeoutStartSec=180

@@ -1,0 +1,11 @@
+[Unit]
+Description=Run AI Attendance staging Sheets outbox worker every five minutes
+
+[Timer]
+OnBootSec=2min
+OnUnitInactiveSec=5min
+AccuracySec=30s
+Unit=ai-attendance-sheets-worker.service
+
+[Install]
+WantedBy=timers.target

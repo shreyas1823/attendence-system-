@@ -1,0 +1,24 @@
+{
+  "purpose": "compile-verification-only",
+  "uploadable": false,
+  "reason": "built without Attendance/secrets.h and therefore contains example placeholders",
+  "artifact": "build/phase1/Attendance.ino.bin",
+  "sizeBytes": 458448,
+  "sha256": "73E86FDEDDDB2417609BFEDCC08E39D60BB9B1CFE971E90A8AE6C836B703B44D",
+  "builtAtLocal": "2026-09-19T21:34:47+05:30",
+  "fqbn": "esp8266:esp8266:nodemcuv2",
+  "arduinoCli": "1.5.1",
+  "esp8266Core": "3.1.2",
+  "libraries": {
+    "Adafruit Fingerprint Sensor Library": "2.1.4",
+    "LiquidCrystal_I2C": "2.0.0"
+  },
+  "resourceUse": {
+    "dataRamBytes": 38332,
+    "dataRamPercent": 47,
+    "instructionRamBytes": 63963,
+    "instructionRamPercent": 97,
+    "flashBytes": 414452,
+    "flashPercent": 39
+  }
+}
